@@ -11,13 +11,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{31F906EB-EA82-4065-B354-89DF706107B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookmarket.Domain", "Bookmarket.Domain\Bookmarket.Domain.csproj", "{64412FD9-C5ED-4222-88EF-174381E62081}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bookmarket.Domain", "Bookmarket.Domain\Bookmarket.Domain.csproj", "{64412FD9-C5ED-4222-88EF-174381E62081}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookmarket.Application", "Bookmarket.Application\Bookmarket.Application.csproj", "{2050BBB8-FFB3-4601-97B2-C5847BEC63B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bookmarket.Application", "Bookmarket.Application\Bookmarket.Application.csproj", "{2050BBB8-FFB3-4601-97B2-C5847BEC63B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookmarket.Persistence", "Bookmarket.Persistence\Bookmarket.Persistence.csproj", "{BB7065A7-DEE7-4470-90B7-3AF941EC36CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bookmarket.Persistence", "Bookmarket.Persistence\Bookmarket.Persistence.csproj", "{BB7065A7-DEE7-4470-90B7-3AF941EC36CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookmarket.WebApi", "Bookmarket.WebApi\Bookmarket.WebApi.csproj", "{88894D56-6AB1-401B-BF66-509548AE6128}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bookmarket.WebApi", "Bookmarket.WebApi\Bookmarket.WebApi.csproj", "{88894D56-6AB1-401B-BF66-509548AE6128}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggerService", "LoggerService\LoggerService.csproj", "{2BB7AD0B-FE18-4CC3-A743-9311DCDE4E94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Contracts\Contracts.csproj", "{48D6A7D8-B6B6-4831-B228-9A5797779D69}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +45,14 @@ Global
 		{88894D56-6AB1-401B-BF66-509548AE6128}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88894D56-6AB1-401B-BF66-509548AE6128}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88894D56-6AB1-401B-BF66-509548AE6128}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BB7AD0B-FE18-4CC3-A743-9311DCDE4E94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BB7AD0B-FE18-4CC3-A743-9311DCDE4E94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BB7AD0B-FE18-4CC3-A743-9311DCDE4E94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BB7AD0B-FE18-4CC3-A743-9311DCDE4E94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48D6A7D8-B6B6-4831-B228-9A5797779D69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48D6A7D8-B6B6-4831-B228-9A5797779D69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48D6A7D8-B6B6-4831-B228-9A5797779D69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48D6A7D8-B6B6-4831-B228-9A5797779D69}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +62,8 @@ Global
 		{2050BBB8-FFB3-4601-97B2-C5847BEC63B5} = {EF5F8FC0-9A17-4D97-8794-27496CB7D149}
 		{BB7065A7-DEE7-4470-90B7-3AF941EC36CF} = {3D296118-90BF-4214-A58E-6E92618BCAAE}
 		{88894D56-6AB1-401B-BF66-509548AE6128} = {E9D58C1F-9455-4949-8DA9-42DD8E4CABFA}
+		{2BB7AD0B-FE18-4CC3-A743-9311DCDE4E94} = {3D296118-90BF-4214-A58E-6E92618BCAAE}
+		{48D6A7D8-B6B6-4831-B228-9A5797779D69} = {EF5F8FC0-9A17-4D97-8794-27496CB7D149}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0654027A-3146-4D8D-B5C2-BBB8C7BCFE06}

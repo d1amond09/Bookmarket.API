@@ -11,11 +11,11 @@ namespace Bookmarket.Domain.Models;
 public class Publisher
 {
 	[Column("PublisherId")]
-	public Guid Id { get; private set; }
+	public Guid Id { get; set; }
 
 	[Required(ErrorMessage = "Publisher name is a required field.")]
 	[MaxLength(100, ErrorMessage = "Maximum length for the name is 100 characters.")]
-	public string Name { get; private set; } = string.Empty;
+	public string? Name { get; set; }
 
-	public ICollection<Book> Books { get; private set; } = [];
+	public ICollection<Book>? Books { get; set; }
 }

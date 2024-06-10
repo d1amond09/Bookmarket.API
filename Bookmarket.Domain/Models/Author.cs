@@ -11,10 +11,10 @@ namespace Bookmarket.Domain.Models;
 public class Author
 {
 	[Column("AuthorId")]
-	public Guid Id { get; private set; }
+	public Guid Id { get; set; }
 
 	[Required(ErrorMessage = "Author full name is a required field.")]
 	[MaxLength(100, ErrorMessage = "Maximum length for the full name is 100 characters.")]
-	public string FullName { get; private set; } = string.Empty;
-	public ICollection<Book> Books { get; private set; } = [];
+	public string? FullName { get; set; }
+	public ICollection<Book>? Books { get; set; }
 }
