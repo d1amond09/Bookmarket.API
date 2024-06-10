@@ -10,17 +10,17 @@ public class Book
 
 	[Required(ErrorMessage = "Book title is a required field.")]
 	[MaxLength(100, ErrorMessage = "Maximum length for the title is 100 characters.")]
-	public string? Title { get; set; } 
+	public string? Title { get; set; }
 
 	[Required(ErrorMessage = "Book Description is a required field.")]
 	[MaxLength(500, ErrorMessage = "Maximum length for the description is 500 characters.")]
-	public string? Description { get; set; } 
-	
+	public string? Description { get; set; }
+
 	[Required(ErrorMessage = "Book ISBN is a required field.")]
 	[MaxLength(17, ErrorMessage = "Maximum length for the ISBN is 17 characters.")]
 	[MinLength(17, ErrorMessage = "Minimum length for the ISBN is 17 characters.")]
 	public string? ISBN { get; set; }
-	
+
 	[Required(ErrorMessage = "Count of book pages is a required field.")]
 	public int PagesCount { get; set; }
 

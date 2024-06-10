@@ -9,9 +9,9 @@ public class Program
 	public static void Main(string[] args)
 	{
 		var builder = WebApplication.CreateBuilder(args);
-		
+
 		LogManager.Setup().LoadConfigurationFromFile("nlog.config", true);
-		
+
 		ConfigureServices(builder.Services, builder.Configuration);
 		var app = builder.Build();
 		ConfigureApp(app);
@@ -26,8 +26,10 @@ public class Program
 		services.ConfigureIISIntegration();
 
 		services.ConfigureSqlContext(configuration);
-		services.ConfigureLoggerService();
 
+		services.ConfigureLoggerService();
+		services.ConfigureRepositoryManager();
+		services.ConfigureServiceManager();
 
 		services.AddControllers();
 	}

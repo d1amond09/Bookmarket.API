@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Bookmarket.Application\Bookmarket.Application.csproj" />
+    <ProjectReference Include="..\Contracts\Contracts.csproj" />
   </ItemGroup>
 
 </Project>
