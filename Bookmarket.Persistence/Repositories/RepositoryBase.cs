@@ -9,20 +9,20 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Bookmarket.Persistence.Repositories;
 
-public abstract class RepositoryBase<T>(BookmarketDbContext bookmarketDbContext) : IRepositoryBase<T> where T : class
+public abstract class RepositoryBase<T>(AppDbContext appDbContext) : IRepositoryBase<T> where T : class
 {
-	protected BookmarketDbContext BookmarketDbContext = bookmarketDbContext;
+	protected AppDbContext AppDbContext = appDbContext;
 
 	public IQueryable<T> FindAll(bool trackChanges) => 
-		!trackChanges ? BookmarketDbContext.Set<T>()
-		.AsNoTracking() : BookmarketDbContext.Set<T>();
+		!trackChanges ? AppDbContext.Set<T>()
+		.AsNoTracking() : AppDbContext.Set<T>();
 
 	public IQueryable<T> FindByCondition(Expression<Func<T, bool>> expression, 
 										bool trackChanges) => 
-		!trackChanges ? BookmarketDbContext.Set<T>().Where(expression)
-	.AsNoTracking() : BookmarketDbContext.Set<T>().Where(expression);
+		!trackChanges ? AppDbContext.Set<T>().Where(expression)
+	.AsNoTracking() : AppDbContext.Set<T>().Where(expression);
 
-	public void Create(T entity) => BookmarketDbContext.Set<T>().Add(entity);
-	public void Update(T entity) => BookmarketDbContext.Set<T>().Update(entity);
-	public void Delete(T entity) => BookmarketDbContext.Set<T>().Remove(entity);
+	public void Create(T entity) => AppDbContext.Set<T>().Add(entity);
+	public void Update(T entity) => AppDbContext.Set<T>().Update(entity);
+	public void Delete(T entity) => AppDbContext.Set<T>().Remove(entity);
 }

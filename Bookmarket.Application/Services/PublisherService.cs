@@ -1,9 +1,9 @@
 ﻿using Contracts;
 using Contracts.Services;
 
-namespace Service;
+namespace Application.Services;
 
-internal sealed class AuthorService(IRepositoryManager repository, ILoggerManager logger) : IAuthorService
+public sealed class PublisherService(IRepositoryManager repository, ILoggerManager logger) : IPublisherService
 {
 	private readonly IRepositoryManager _repository = repository;
 	private readonly ILoggerManager _logger = logger;

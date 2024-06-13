@@ -1,9 +1,8 @@
-﻿using Bookmarket.Persistence;
+﻿using Application.Services;
+using Bookmarket.Persistence;
 using Contracts;
 using LoggerService;
 using Microsoft.EntityFrameworkCore;
-using Service;
-using Service.Contracts;
 
 namespace Bookmarket.WebApi.Extensions;
 
@@ -29,7 +28,7 @@ public static class ServiceExtensions
 
 	public static void ConfigureSqlContext(this IServiceCollection services,
 		IConfiguration configuration) =>
-		services.AddDbContext<BookmarketDbContext>(opts =>
+		services.AddDbContext<AppDbContext>(opts =>
 			opts.UseSqlServer(configuration.GetConnectionString("sqlConnection"), b =>
 			{
 				b.MigrationsAssembly("Bookmarket.WebApi");
@@ -42,6 +41,4 @@ public static class ServiceExtensions
 
 	public static void ConfigureServiceManager(this IServiceCollection services) =>
 		services.AddScoped<IServiceManager, ServiceManager>();
-
-
 }

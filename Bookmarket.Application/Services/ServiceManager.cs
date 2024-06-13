@@ -7,7 +7,7 @@ using Contracts;
 using Contracts.Repositories;
 using Contracts.Services;
 
-namespace Service;
+namespace Application.Services;
 
 public class ServiceManager(IRepositoryManager repositoryManager, ILoggerManager logger) : IServiceManager
 {

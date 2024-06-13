@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Bookmarket.Persistence;
 
-public class BookmarketDbContext(DbContextOptions options) : DbContext(options)
+public class AppDbContext(DbContextOptions options) : DbContext(options)
 {
 	public DbSet<Publisher>? Publishers { get; set; }
 	public DbSet<Author>? Authors { get; set; }

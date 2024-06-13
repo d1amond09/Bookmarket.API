@@ -1,5 +1,5 @@
 ﻿using Contracts;
-using Service.Contracts;
+using Contracts.Services;
 
 namespace Service;
 

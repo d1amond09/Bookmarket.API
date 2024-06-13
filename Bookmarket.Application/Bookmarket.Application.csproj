@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Bookmarket.Domain\Bookmarket.Domain.csproj" />
+    <ProjectReference Include="..\Contracts\Contracts.csproj" />
   </ItemGroup>
 
   <ItemGroup>

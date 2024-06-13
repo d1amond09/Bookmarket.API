@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Bookmarket.WebApi.Migrations
 {
-    [DbContext(typeof(BookmarketDbContext))]
+    [DbContext(typeof(AppDbContext))]
     [Migration("20240610163144_InitialData")]
     partial class InitialData
     {
